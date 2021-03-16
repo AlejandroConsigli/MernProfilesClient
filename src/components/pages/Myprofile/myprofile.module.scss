@@ -1,0 +1,139 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+%image-size {
+    height: 50vw;
+    width: 50vw;
+    max-height: 350px;
+    max-width: 350px;
+}
+
+.container {
+    .content {
+        .info {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            .card {
+                width: 100%;
+                flex: 1;
+                @extend %flex-center;
+                flex-direction: column;
+                margin: 100px 0;
+                .box {
+                    position: relative;
+                    @extend %image-size;
+                    .image {
+                        cursor: pointer;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                    .cross {
+                        position: absolute;
+                        top: -4%;
+                        right: -2%;
+                        color: $error-color;
+                        font-size: $subtitle-size;
+                        cursor: pointer;
+                    }
+                }
+                .imagetext {
+                    color: $dark-color;
+                    font-size: $text-size;
+                    margin: 5px;
+                }
+                .upload {
+                    display: none;
+                }
+                .imageDots {
+                    @extend %flex-center;
+                    @extend %image-size;
+                }
+                .form {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    .groupitem {
+                        width: 50%;
+                        display: flex;
+                        flex-direction: column;
+                        .label {
+                            color: $dark-color;
+                            font-size: $text-size;
+                            margin: 5px 20px 0 20px;
+                        }
+                        .input {
+                            color: $dark-color;
+                            font-size: $text-size;
+                            padding: 5px;
+                            border-radius: 5px;
+                            border: 1px solid $primary-color;
+                            margin: 0 20px;
+                        }
+                        .gender {
+                            color: $dark-color;
+                            font-size: $text-size;
+                            padding: 5px;
+                            border-radius: 5px;
+                            margin: 0 20px;
+                            .radio {
+                                margin-right: 10px;
+                                cursor: pointer;
+                            }
+                            .text {
+                                margin-right: 20px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    .buttons {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        .submit,
+                        .delete {
+                            width: 150px;
+                            height: 30px;
+                            margin-top: 30px;
+                            color: $light-color;
+                            font-size: $text-size;
+                            border-radius: 5px;
+                            border: 1px solid $primary-color;
+                            cursor: pointer;
+                        }
+                        .submit {
+                            background-color: $dark-color;
+                        }
+                        .delete {
+                            background-color: $error-color;
+                        }
+                        .delete:disabled {
+                            cursor: not-allowed;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        .content {
+            .info {
+                .card {
+                    .form {
+                        .groupitem {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

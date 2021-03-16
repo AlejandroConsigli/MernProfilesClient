@@ -1,0 +1,48 @@
+body {
+  background-image: url("/assets/images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+}
+
+.content {
+  flex: 1;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 576px) {
+  .content {
+    max-width: 540px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .content {
+    max-width: 960px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .content {
+    max-width: 1140px;
+  }
+}

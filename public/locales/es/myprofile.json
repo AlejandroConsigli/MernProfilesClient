@@ -1,0 +1,11 @@
+{
+    "age": "Edad",
+    "gender": "Género",
+    "height": "Altura",
+    "weight": "Peso",
+    "female": "Femenino",
+    "male": "Masculino",
+    "accept": "Aceptar",
+    "delete": "Borrar",
+    "image_text": "Jpg, png o jpeg"
+}

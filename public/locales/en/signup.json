@@ -1,0 +1,8 @@
+{
+    "title": "Sign Up",
+    "email": "Email",
+    "name": "Name",
+    "lastname": "Last name",
+    "password": "Password",
+    "password_repeat": "Repeat your password"
+}

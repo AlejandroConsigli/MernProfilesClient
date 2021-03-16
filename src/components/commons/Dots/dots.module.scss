@@ -1,0 +1,12 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+.dots {
+    width: 100%;
+    @extend %flex-center;
+    svg {
+        width: 40px;
+        height: 10px;
+        fill: $dark-color;
+    }
+}

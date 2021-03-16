@@ -1,0 +1,16 @@
+{
+    "missing_required_fields": "Fill in the required fields",
+    "non_valid_email": "Enter a valid email",
+    "minimun_password": "Enter a password of at least 6 characters",
+    "non_equal_passwords": "Passwords do not match",
+    "non_valid_age": "Enter a valid age",
+    "invalid_credentials": "Invalid credentials",
+    "user_already_exists": "User already exists",
+    "user_not_exists": "User does not exist",
+    "successfully_created": "Successfully created",
+    "successfully_edited": "Successfully edited",
+    "successfully_deleted": "Successfully deleted",
+    "server_error": "Server error",
+    "check_email": "Go to your email box",
+    "format_not_supported": "Format not supported"
+}

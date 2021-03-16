@@ -1,0 +1,93 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+%image-size {
+    height: 80vw;
+    width: 80vw;
+    max-height: 300px;
+    max-width: 300px;
+}
+
+.container {
+    .content {
+        .info {
+            height: 100%;
+            @extend %flex-center;
+            .space {
+                width: 100%;
+                @extend %flex-center;
+                margin: 100px 0;
+                .card {
+                    display: flex;
+                    flex-direction: row;
+                    background-color: $light-color;
+                    border-radius: 5px;
+                    border: 1px solid $dark-color;
+                    margin: 10px;
+                    padding: 10px;
+                    max-width: 750px;
+                    .image {
+                        @extend %image-size;
+                        object-fit: cover;
+                    }
+                    .imageDots {
+                        @extend %flex-center;
+                        @extend %image-size;
+                    }
+                    .data {
+                        padding: 50px;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        .name {
+                            color: $dark-color;
+                            font-size: $title-size;
+                            text-align: center;
+                        }
+                        .groupitem {
+                            flex: 1;
+                            @extend %flex-center;
+                            flex-direction: column;
+                            .item {
+                                color: $dark-color;
+                                font-size: $subtitle-size;
+                            }
+                        }
+                        .dots {
+                            height: 30px;
+                            @extend %flex-center;
+                            margin-top: 10px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        .content {
+            .info {
+                .space {
+                    .card {
+                        height: auto;
+                        flex-direction: column;
+                        align-items: center;
+                        .data {
+                            padding: 0;
+                            width: 100%;
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            .name {
+                                margin-top: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

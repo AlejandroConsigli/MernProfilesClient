@@ -1,0 +1,8 @@
+{
+    "title": "Registrarse",
+    "email": "Email",
+    "name": "Nombre",
+    "lastname": "Apellido",
+    "password": "Contraseña",
+    "password_repeat": "Repita su contraseña"
+}

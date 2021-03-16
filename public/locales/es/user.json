@@ -1,0 +1,9 @@
+{
+    "email": "Email",
+    "name": "Nombre",
+    "lastname": "Apellido",
+    "password": "Contraseña",
+    "password_repeat": "Repita su contraseña",
+    "accept": "Aceptar",
+    "delete": "Borrar"
+}

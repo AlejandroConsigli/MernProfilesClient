@@ -1,0 +1,22 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+.container {
+    .content {
+        .info {
+            height: 100%;
+            width: 100%;
+            @extend %flex-center;
+            .card {
+                @extend %flex-center;
+                flex-direction: column;
+                .title {
+                    color: $dark-color;
+                    font-size: $title-size;
+                    margin-top: 0;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}

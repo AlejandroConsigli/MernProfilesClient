@@ -1,0 +1,22 @@
+@import "../../../shared/styles/common.scss";
+@import "../../../shared/styles/variables.scss";
+
+.mytoastify {
+    .error,
+    .warning,
+    .success {
+        border-radius: 5px !important;
+        font-size: 15px;
+        color: $light-color !important;
+        padding: 10px 20px !important;
+    }
+    .error {
+        background: $error-color !important;
+    }
+    .warning {
+        background: $dark-color !important;
+    }
+    .success {
+        background: $success-color !important;
+    }
+}
