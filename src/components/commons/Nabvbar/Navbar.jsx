@@ -8,7 +8,7 @@ import Dots from "../../commons/Dots/Dots";
 import SwipeableDrawer from "@material-ui/core/SwipeableDrawer";
 
 const Navbar = () => {
-    const { t } = useTranslation("navbar");
+    const { t } = useTranslation("routes");
     const dispatch = useDispatch();
     const userState = useSelector((state) => state.user);
 

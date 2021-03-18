@@ -1,6 +1,6 @@
 import React, { memo, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import styles from "./reset.module.scss";
+import styles from "./recover.module.scss";
 import { useTranslation } from "react-i18next";
 import { useDispatch, useSelector } from "react-redux";
 import { setAlert } from "../../../actions/alert";
@@ -11,8 +11,8 @@ import { useHistory } from "react-router";
 import setAuthToken from "../../../shared/utils/setAuthToken";
 import { USER_FAIL } from "../../../actions/user";
 
-const Reset = ({ match: { params } }) => {
-    const { t } = useTranslation(["reset", "alert"]);
+const Recover = ({ match: { params } }) => {
+    const { t } = useTranslation(["recover", "alert"]);
     const dispatch = useDispatch();
     const history = useHistory();
     const userState = useSelector((state) => state.user);
@@ -115,4 +115,4 @@ const Reset = ({ match: { params } }) => {
     );
 };
 
-export default memo(Reset);
+export default memo(Recover);

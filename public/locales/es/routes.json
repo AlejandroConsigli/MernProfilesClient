@@ -1,0 +1,14 @@
+{
+    "profiles": "Perfiles",
+    "myprofile": "Mi Perfil",
+    "signout": "Cerrar Sesión",
+    "user": "Usuario",
+    "password": "Contraseña",
+    "menu": "Menu",
+    "signin": "Iniciar Sesión",
+    "signup": "Registrarse",
+    "forgot": "Olvidé",
+    "recover": "Recuperar",
+    "activate": "Activar",
+    "profile": "Perfil"
+}

@@ -2,13 +2,14 @@ import React, { lazy, memo, useEffect } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { auth } from "../actions/auth";
+import { useTranslation } from "react-i18next";
 
 const PublicRoute = lazy(() => import("./PublicRoute"));
 const Landing = lazy(() => import("../components/pages/Landing/Landing"));
 const Signin = lazy(() => import("../components/pages/Signin/Signin"));
 const Signup = lazy(() => import("../components/pages/Signup/Signup"));
 const Forgot = lazy(() => import("../components/pages/Forgot/Forgot"));
-const Reset = lazy(() => import("../components/pages/Reset/Reset"));
+const Recover = lazy(() => import("../components/pages/Recover/Recover"));
 const Activate = lazy(() => import("../components/pages/Activate/Activate"));
 const PrivateRoute = lazy(() => import("./PrivateRoute"));
 const Profiles = lazy(() => import("../components/pages/Profiles/Profiles"));
@@ -19,6 +20,7 @@ const Myprofile = lazy(() => import("../components/pages/Myprofile/Myprofile"));
 const Notfound = lazy(() => import("../components/pages/Notfound/Notfound"));
 
 const Routes = () => {
+    const { t } = useTranslation("routes");
     const dispatch = useDispatch();
     const location = useLocation();
 
@@ -31,8 +33,9 @@ const Routes = () => {
     }, [dispatch]);
 
     useEffect(() => {
-        document.title = capitalizeFirstLetter(location.pathname.replace(/\\|\//g,''));
-    }, [location])
+        const path = location.pathname.split("/").filter(item => item)[0];
+        document.title = capitalizeFirstLetter(t(path));
+    }, [location, t])
     
     return (
         <Switch>
@@ -40,7 +43,7 @@ const Routes = () => {
             <PublicRoute exact path="/signin" component={Signin} />
             <PublicRoute exact path="/signup" component={Signup} />
             <PublicRoute exact path="/forgot" component={Forgot} />
-            <PublicRoute exact path="/reset/:token" component={Reset} />
+            <PublicRoute exact path="/recover/:token" component={Recover} />
             <PublicRoute exact path="/activate/:token" component={Activate} />
             <PrivateRoute exact path="/user" component={User} />
             <PrivateRoute exact path="/password" component={Password} />
