@@ -1,5 +1,5 @@
 import React, { lazy, memo, useEffect } from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Switch, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { auth } from "../actions/auth";
 
@@ -20,10 +20,19 @@ const Notfound = lazy(() => import("../components/pages/Notfound/Notfound"));
 
 const Routes = () => {
     const dispatch = useDispatch();
+    const location = useLocation();
+
+    const capitalizeFirstLetter = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
 
     useEffect(() => {
         dispatch(auth());
     }, [dispatch]);
+
+    useEffect(() => {
+        document.title = capitalizeFirstLetter(location.pathname.replace(/\\|\//g,''));
+    }, [location])
     
     return (
         <Switch>
