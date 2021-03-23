@@ -6,5 +6,5 @@ export const headers = {
 
 export const profileDefaultImage = "/assets/images/profile.jpg";
 
-axios.defaults.baseURL = process.env.NODE_ENV  !== "development" 
+axios.defaults.baseURL = process.env.NODE_ENV  === "development" 
     ? "http://localhost:5000" : "https://mernprofiles.herokuapp.com";
